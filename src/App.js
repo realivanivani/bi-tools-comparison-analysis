@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { TrendingUp, DollarSign, Globe, Building2, ExternalLink } from 'lucide-react';
 
 const BIToolsComparison = () => {
@@ -289,7 +289,7 @@ const BIToolsComparison = () => {
                     fill="#8884d8"
                     dataKey="share"
                   >
-                    {marketShareData.map((entry, index) => (
+                    {marketShareData.map((_entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
